@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #1A0B2E;
+    color: #ffffff;
+
+}
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  
+}
+nav{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    margin: 16px auto;
+}
+
+
+nav .nav-logo h2{
+  
+    color: aqua;  
+}
+
+.tech{
+    color: #ffffff;
+}
+.nav-menu{
+     display: flex;
+    justify-content: space-evenly;
+    gap: 32px;
+    /* margin: 36.5px 0px 36.5px 0px; */
+}
+nav .nav-menu a{
+    text-decoration: none;
+    font-size: 16px;
+   font-weight: 500;
+   color: #ffffff;
+  
+}
+.hero-section{
+    border: 1px solid red;
+    width: 100%;
+    margin: 0 auto;
+}
+.hero-section h1{
+    /* font-size: 48px; */
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 100px;
+}
+.hero-section p{
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    
+}
+.hero-section .hero-button{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.about-section{
+    border: 1px solid red;
+    width: 100%;
+    margin: 0 auto;
+}
+.about-section h1{
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 100px;
+}
+.about-section p{
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    
+}
+.why-section{
+    border: 1px solid red;
+    width: 100%;
+    margin: 0 auto;
+}
+.why-section h1{
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 100px;
+}
+.why-section p{
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    
+}
