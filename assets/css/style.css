@@ -91,17 +91,7 @@
             overflow: hidden;
         }
 
-        .banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(255,0,110);stop-opacity:0.1" /><stop offset="100%" style="stop-color:rgb(131,56,236);stop-opacity:0.1" /></linearGradient></defs><path fill="url(%23wave)" d="M0,300 Q300,100 600,300 T1200,300 L1200,800 L0,800 Z" /></svg>') no-repeat center;
-            background-size: cover;
-            opacity: 0.3;
-        }
+     
 
         .podcast-circle {
             position: relative;
@@ -113,12 +103,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
         }
 
         .podcast-circle::before {
@@ -135,20 +119,20 @@
             z-index: -1;
         }
 
+
         .microphone-icon {
-            width: 100px;
-            height: 100px;
-            background-color: white;
-            border-radius: 50%;
+            width: 90px;
+            height: 90px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
 
-        .microphone-icon::before {
-            content: '🎙️';
-            font-size: 50px;
+        .microphone-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
         }
 
         .new-badge {
@@ -163,31 +147,7 @@
             font-weight: bold;
         }
 
-        .waveform {
-            position: absolute;
-            width: 600px;
-            height: 100px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3px;
-            z-index: -1;
-        }
-
-        .wave-bar {
-            width: 3px;
-            background: linear-gradient(180deg, #ff006e, #8338ec);
-            border-radius: 2px;
-            animation: wave 1s ease-in-out infinite;
-        }
-
-        @keyframes wave {
-            0%, 100% { height: 20px; }
-            50% { height: 60px; }
-        }
+       
 
         .banner h1 {
             font-size: 48px;
@@ -211,6 +171,21 @@
             position: relative;
         }
 
+        /* Hero buttons */
+        .banner-buttons a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-mini-icon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            display: block;
+        }
+
         .btn-primary {
             padding: 14px 32px;
             background: linear-gradient(90deg, #ff006e, #8338ec);
@@ -220,17 +195,21 @@
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.3s;
+            text-decoration: none;
         }
 
         .btn-secondary {
             padding: 14px 32px;
             background: transparent;
-            border: 2px solid #8338ec;
+            /* border: 2px solid #8338ec; */
+            border: 1px solid #00FF88;
             border-radius: 25px;
-            color: white;
+            /* color: white; */
+            color: #00FF88;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
+            text-decoration: none;
         }
 
         .btn-secondary:hover {
@@ -418,8 +397,10 @@
             font-size: 14px;
         }
 
-        .episode-duration::before {
-            content: '⏱️';
+        .duration-icon {
+            width: 16px;
+            height: 16px;
+            display: block;
         }
 
         /* Host Section */
@@ -543,7 +524,7 @@
             font-size: 14px;
         }
 
-        /* Responsive Design */
+        
         @media (max-width: 992px) {
             .navbar {
                 padding: 20px 40px;
@@ -594,10 +575,6 @@
                 gap: 20px;
             }
 
-            .nav-menu.active {
-                left: 0;
-            }
-
             .hamburger {
                 display: flex;
             }
@@ -616,16 +593,8 @@
             }
 
             .microphone-icon {
-                width: 70px;
-                height: 70px;
-            }
-
-            .microphone-icon::before {
-                font-size: 35px;
-            }
-
-            .waveform {
-                width: 90%;
+                width: 60px;
+                height: 60px;
             }
 
             .banner-buttons {
@@ -652,25 +621,9 @@
             }
         }
 
-        /* ------------------------------
-           Additions (kept minimal)
-           - CSS-only mobile navigation toggle (no JavaScript)
-           - Minor asset-based styling hooks
-        ------------------------------ */
+       
 
-        html { scroll-behavior: smooth; }
-
-        .nav-toggle {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
+        .nav-toggle { display: none; }
 
         @media (max-width: 576px) {
             .nav-toggle:checked ~ .nav-menu {
@@ -679,7 +632,7 @@
         }
 
         .btn-icon img { width: 18px; height: 18px; vertical-align: middle; }
-        .icon-img { width: 52px; height: 52px; }
+        .icon-img { width: 100%; height: 100%; }
         .feature-img { width: 48px; height: 48px; }
         .host-photo { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
         .social-icon img { width: 18px; height: 18px; }
@@ -703,11 +656,7 @@
             background-position: center;
         }
 
-        .microphone-icon {
-            background: rgba(255, 255, 255, 0.9);
-        }
-
-        .microphone-icon::before { content: ''; }
+       
 
         .episode-video {
             width: 100%;
