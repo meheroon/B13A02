@@ -251,7 +251,8 @@
         .stat-number {
             font-size: 48px;
             font-weight: bold;
-            background: linear-gradient(90deg, #00ff88, #8338ec);
+            /* background: linear-gradient(90deg, #00ff88, #8338ec); */
+            background: #00FF88;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
