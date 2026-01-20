@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B13A02-Techwave</title>
+    <title>B13A02-Techwave Podcast</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="nav-logo">
             <h2><span class="tech">Tech</span>Wave</h2>
         </div>
@@ -17,16 +17,16 @@
             <a href="host">Host</a>
         </div>
         <div class="nav-btn">
-            <button>Button</button>
+            <button class="primary-btn">Subscribe</button>
         </div>
     </nav>
     <section class="hero-section">
         <h1>TechWave</h1>
         <p>Your daily dose of tech insights, productivity hacks, and personal growth</p>
-        <ul class="hero-button">
-            <button>Listen on Spotify</button>
-            <button>Subscribe</button>
-        </ul>
+        <div class="hero-button">
+            <button class="primary-btn">Listen on Spotify</button>
+            <button class="secondary-btn">Subscribe</button>
+        </div>
     </section>
     <section class="about-section">
         <h1>About The Podcast</h1>
@@ -39,10 +39,58 @@
 
     <section class="why-section">
         <h1>Why Choose TechWave</h1>
-            <div class="why-container">
-                
+
+        <div class="why-container">
+            <div class="why-card">
+                <h3>Practical Tech Talks</h3>
+                <p>Real-world discussions you can apply immediately.</p>
             </div>
+
+            <div class="why-card">
+                <h3>Weekly Episodes</h3>
+                <p>Fresh content every week to keep you updated.</p>
+            </div>
+
+            <div class="why-card">
+                <h3>Expert Guests</h3>
+                <p>Insights from developers, founders, and creators.</p>
+            </div>
+        </div>
     </section>
+    <section id="episodes" class="episodes-section">
+        <h1>Latest Episodes</h1>
+
+        <div class="episode-list">
+            <div class="episode-card">
+                <h4>Episode 01</h4>
+                <p>Getting Started with Web Development</p>
+            </div>
+
+            <div class="episode-card">
+                <h4>Episode 02</h4>
+                <p>Productivity Tips for Developers</p>
+            </div>
+
+            <div class="episode-card">
+                <h4>Episode 03</h4>
+                <p>How to Learn Programming Effectively</p>
+            </div>
+        </div>
+    </section>
+    <section id="host" class="host-section">
+        <h1>Meet The Host</h1>
+        <p>
+            Hosted by a passionate web developer who loves teaching, learning,
+            and sharing real experiences from the tech industry.
+        </p>
+    </section>
+    <section class="cta-section">
+        <h2>Ready to Ride the TechWave?</h2>
+        <button class="primary-btn">Start Listening Today</button>
+    </section>
+    <footer class="footer">
+        <p>© 2026 TechWave Podcast. All rights reserved.</p>
+    </footer>
 
     
 </body>
